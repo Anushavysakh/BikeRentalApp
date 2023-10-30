@@ -1,0 +1,49 @@
+{
+  "bikes": [
+    {
+      "id": 1,
+      "name": "Royal Enfield\nClassic 350",
+      "image": "assets/images/Royal-Enfield-Classic-350.jpg",
+      "category": "Cruiser",
+      "displacement_cc": 346,
+      "max_speed_kmph": 120,
+      "rent_per_hour_inr": 200
+    },
+    {
+      "id": 2,
+      "name": "Bajaj Pulsar\n220F",
+      "image": "assets/images/bajaj_pulsr.jpeg",
+      "category": "Sport",
+      "displacement_cc": 220,
+      "max_speed_kmph": 134,
+      "rent_per_hour_inr": 150
+    },
+    {
+      "id": 3,
+      "name": "Honda Activa\n6G",
+      "image": "assets/images/scooty.jpeg",
+      "category": "Scooter",
+      "displacement_cc": 109,
+      "max_speed_kmph": 85,
+      "rent_per_hour_inr": 100
+    },
+    {
+      "id": 4,
+      "name": "KTM Duke\n390",
+      "image": "assets/images/KTM Duke 390.jpeg",
+      "category": "Sport",
+      "displacement_cc": 373,
+      "max_speed_kmph": 167,
+      "rent_per_hour_inr": 250
+    },
+    {
+      "id": 5,
+      "name": "Hero Splendor\nPlus",
+      "image": "assets/images/Hero Splendor Plus.jpeg",
+      "category": "Standard",
+      "displacement_cc": 97,
+      "max_speed_kmph": 87,
+      "rent_per_hour_inr": 120
+    }
+  ]
+}
