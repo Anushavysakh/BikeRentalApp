@@ -1,0 +1,35 @@
+{
+  "accessories": [
+    {
+      "id": 1,
+      "name": "Bike Helmet",
+      "quantity": 1,
+      "rent_per_day": 800,
+      "image": "assets/images/helmet.jpeg"
+    },
+    {"id": 2,
+      "name": "Riding Jacket",
+      "quantity": 1,
+      "rent_per_day": 800,
+      "image": "assets/images/jacket.jpeg"
+    },
+    {"id": 3,
+      "name": "Bike Lock",
+      "quantity": 1,
+      "rent_per_day": 300,
+      "image": "assets/images/bike_lock.jpeg"
+    },
+    {"id": 4,
+      "name": "Gloves",
+      "quantity": 1,
+      "rent_per_day": 300,
+      "image": "assets/images/gloves.jpeg"
+    },
+    {"id": 5,
+      "name": "Gloves",
+      "quantity": 1,
+      "rent_per_day": 300,
+      "image": "assets/images/gloves.jpeg"
+    }
+  ]
+}

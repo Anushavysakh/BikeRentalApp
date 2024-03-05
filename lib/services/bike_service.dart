@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
-import 'bike.dart';
+import '../models/bike.dart';
 
 class BikeService with ChangeNotifier{
 
@@ -15,7 +15,7 @@ class BikeService with ChangeNotifier{
     final String jsonData = await rootBundle.loadString('assets/bikes.json');
     final List<dynamic> jsonList = json.decode(jsonData)['bikes'];
     _bikes = jsonList.map((json) => Bike.fromJson(json)).toList();
-
+print(_bikes);
     return jsonList.map((json) => Bike.fromJson(json)).toList();
   }
 

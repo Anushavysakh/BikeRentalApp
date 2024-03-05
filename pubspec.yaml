@@ -71,6 +71,10 @@ flutter:
     - assets/images/Royal-Enfield-Classic-350.jpg
     - assets/images/scooty.jpeg
     - assets/images/helmet.jpeg
+    - assets/accessories.json
+    - assets/images/bike_lock.jpeg
+    - assets/images/gloves.jpeg
+    - assets/images/jacket.jpeg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

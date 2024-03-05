@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../bike_service.dart';
+import '../services/bike_service.dart';
 import '../widgets/text_widgets.dart';
 
 class CheckoutPage extends StatefulWidget {

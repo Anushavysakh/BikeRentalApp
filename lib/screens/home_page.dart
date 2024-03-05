@@ -4,9 +4,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:rent_a_bike/bike.dart';
+import 'package:rent_a_bike/models/bike.dart';
 import 'package:rent_a_bike/screens/bike_info_screen.dart';
-import 'package:rent_a_bike/bike_service.dart';
+import 'package:rent_a_bike/services/bike_service.dart';
 import 'package:rent_a_bike/widgets/text_widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                        left: 5.0, right: 5, top: 5, bottom: 5),
+                        left: 4.0, right: 4, top: 4, bottom: 4),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
@@ -192,9 +192,7 @@ class _HomePageState extends State<HomePage> {
                 }),
             SizedBox(height: 10),
             buildTextSubtitle("Recently ", "Viewed"),
-            const SizedBox(
-              height: 10,
-            ),
+
             BikeList(service: service),
           ]),
         ));

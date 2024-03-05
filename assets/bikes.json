@@ -35,15 +35,6 @@
       "displacement_cc": 373,
       "max_speed_kmph": 167,
       "rent_per_hour_inr": 250
-    },
-    {
-      "id": 5,
-      "name": "Hero Splendor\nPlus",
-      "image": "assets/images/Hero Splendor Plus.jpeg",
-      "category": "Standard",
-      "displacement_cc": 97,
-      "max_speed_kmph": 87,
-      "rent_per_hour_inr": 120
     }
   ]
 }
