@@ -152,7 +152,7 @@ class _BikeInfoScreenState extends State<BikeInfoScreen> {
             child: Container(
               padding: EdgeInsets.only(left: 10, top: 5),
               width: 200,
-              height: 65,
+              height: 70,
               decoration: BoxDecoration(
                 color: Colors.black,
                 border: Border.all(
@@ -204,212 +204,83 @@ class _BikeInfoScreenState extends State<BikeInfoScreen> {
                           height: MediaQuery.of(context).size.height,
                           width: 400,
                           child: ListView.builder(
+                            padding: EdgeInsets.only(bottom: 10),
                             physics: AlwaysScrollableScrollPhysics(),
                             scrollDirection: Axis.vertical,
                             shrinkWrap: true,
                             itemCount: accessory.length,
                             itemBuilder: (context, index) {
-                              return Container(
-                                width: 370,
-                                height: 70,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.circular(14),
-                                    border: Border.all(
-                                        color: Colors.grey, width: 2)),
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image.asset(
-                                        accessory[index].image.toString(),
-                                        height: 50,
-                                        width: 50,
-                                        fit: BoxFit.fill,
-                                      ),
-                                      Text(
-                                        "${accessory[index].name.toString()}\n${accessory[index].rentPerDay}/per day",
-                                        style: const TextStyle(fontSize: 12),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          addItem();
-                                        },
-                                        child: itemCount == 0
-                                            ? Text("Add")
-                                            : Text('$itemCount'),
-                                      ),
-                                    ]),
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  width: 370,
+                                  height: 70,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.rectangle,
+                                      borderRadius: BorderRadius.circular(14),
+                                      border: Border.all(
+                                          color: Colors.grey, width: 2)),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Image.asset(
+                                          accessory[index].image.toString(),
+                                          height: 50,
+                                          width: 50,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Text(
+                                          "${accessory[index].name.toString()}\n${accessory[index].rentPerDay}/per day",
+                                          style: const TextStyle(fontSize: 12),
+                                        ),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            addItem();
+                                          },
+                                          child: itemCount == 0
+                                              ? Text("Add")
+                                              : Text('$itemCount'),
+                                        ),
+                                      ]),
+                                ),
                               );
                             },
                           ),
                         );
                       }
-                    }),
-                ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.black),
-                      padding: MaterialStateProperty.all(EdgeInsets.only(
-                        right: 100,
-                        left: 100,
-                      )),
-                      alignment: Alignment.center,
-                      shape: MaterialStateProperty.all(BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)))),
-                  child: Text(
-                    "CheckOut",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context)
-                        .pushNamed('/checkout', arguments: index!);
+                    }),          Positioned(
+                    top: 750,
+                    left: 22,
+                    right: 22,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.black),
+                          padding: MaterialStateProperty.all(EdgeInsets.only(
+                            right: 100,
+                            left: 100,
+                          )),
+                          alignment: Alignment.center,
+                          shape: MaterialStateProperty.all(BeveledRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)))),
+                      child: Text(
+                        "CheckOut",
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushNamed('/checkout', arguments: index!);
 
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //   builder: (context) => CheckoutPage(),
-                    // ));
-                  },
-                )
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (context) => CheckoutPage(),
+                        // ));
+                      },
+                    )),
+
               ]),
             ),
-            // Container(
-            //   width: 370,
-            //   decoration: BoxDecoration(
-            //       shape: BoxShape.rectangle,
-            //       borderRadius: BorderRadius.circular(14),
-            //       border: Border.all(color: Colors.grey, width: 2)),
-            //   child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //       children: [
-            //         Image.asset(
-            //           "assets/images/helmet.jpeg",
-            //           height: 100,
-            //           width: 100,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         Text("Helmet\n800/per day"),
-            //         ElevatedButton(
-            //           onPressed: () {
-            //             addItem();
-            //           },
-            //           child:
-            //           itemCount == 0 ? Text("Add") : Text('$itemCount'),
-            //         ),
-            //       ]),
-            // ),
-            // Container(
-            //   width: 370,
-            //   decoration: BoxDecoration(
-            //       shape: BoxShape.rectangle,
-            //       borderRadius: BorderRadius.circular(14),
-            //       border: Border.all(color: Colors.grey, width: 2)),
-            //   child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //       children: [
-            //         Image.asset(
-            //           "assets/images/helmet.jpeg",
-            //           height: 100,
-            //           width: 100,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         Text("Helmet\n800/per day"),
-            //         ElevatedButton(
-            //           onPressed: () {
-            //             addItem();
-            //           },
-            //           child:
-            //           itemCount == 0 ? Text("Add") : Text('$itemCount'),
-            //         ),
-            //       ]),
-            // ), Container(
-            //   width: 370,
-            //   decoration: BoxDecoration(
-            //       shape: BoxShape.rectangle,
-            //       borderRadius: BorderRadius.circular(14),
-            //       border: Border.all(color: Colors.grey, width: 2)),
-            //   child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //       children: [
-            //         Image.asset(
-            //           "assets/images/helmet.jpeg",
-            //           height: 100,
-            //           width: 100,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         Text("Helmet\n800/per day"),
-            //         ElevatedButton(
-            //           onPressed: () {
-            //             addItem();
-            //           },
-            //           child:
-            //           itemCount == 0 ? Text("Add") : Text('$itemCount'),
-            //         ),
-            //       ]),
-            // ),
           ),
-          // child: Flexible(
-          //   child: ListView.builder(
-          //   itemCount: accessory.length,
-          //   itemBuilder: (context, index) {
-          //     print(accessory[2].name);
-          //     return Padding(
-          //      padding: const EdgeInsets.only(left: 5, right: 5, bottom: 10),
-          //       child: Container(
-          //         height: 100,
-          //         decoration: BoxDecoration(
-          //             shape: BoxShape.rectangle,
-          //             borderRadius: BorderRadius.circular(14),
-          //             border: Border.all(color: Colors.grey, width: 2)),
-          //         child: Row(
-          //             mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //             children: [
-          //               Image.asset(
-          //                 accessory[index].image.toString(),
-          //                 height: 100,
-          //                 width: 100,
-          //                 fit: BoxFit.fill,
-          //               ),
-          //               Text("${accessory[index].name}\n${accessory[index]
-          //                   .rentPerDay}/per day"),
-          //               ElevatedButton(
-          //                 onPressed: () {
-          //                   addItem();
-          //                 },
-          //                 child:
-          //                 itemCount == 0 ? Text("Add") : Text('$itemCount'),
-          //               ),
-          //             ]),
-          //       ),
-          //     );
-          //   },),
-          // ),
 
-          Positioned(
-              top: 750,
-              left: 22,
-              right: 22,
-              child: ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.black),
-                    padding: MaterialStateProperty.all(EdgeInsets.only(
-                      right: 100,
-                      left: 100,
-                    )),
-                    alignment: Alignment.center,
-                    shape: MaterialStateProperty.all(BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)))),
-                child: Text(
-                  "CheckOut",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamed('/checkout', arguments: index!);
-
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //   builder: (context) => CheckoutPage(),
-                  // ));
-                },
-              ))
         ]),
       ),
     );
