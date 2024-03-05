@@ -53,7 +53,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           left: 30,
                         ),
                         child: Container(
-                          width: 275,
+                          width: 255,
                           height: 60,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(

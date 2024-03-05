@@ -249,37 +249,38 @@ class _BikeInfoScreenState extends State<BikeInfoScreen> {
                           ),
                         );
                       }
-                    }),          Positioned(
-                    top: 750,
-                    left: 22,
-                    right: 22,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.black),
-                          padding: MaterialStateProperty.all(EdgeInsets.only(
-                            right: 100,
-                            left: 100,
-                          )),
-                          alignment: Alignment.center,
-                          shape: MaterialStateProperty.all(BeveledRectangleBorder(
-                              borderRadius: BorderRadius.circular(5)))),
-                      child: Text(
-                        "CheckOut",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushNamed('/checkout', arguments: index!);
-
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //   builder: (context) => CheckoutPage(),
-                        // ));
-                      },
-                    )),
+                    }),
 
               ]),
             ),
           ),
+        // Positioned(
+        //     top: 750,
+        //     left: 22,
+        //     right: 22,
+        //     child: ElevatedButton(
+        //       style: ButtonStyle(
+        //           backgroundColor: MaterialStateProperty.all(Colors.black),
+        //           padding: MaterialStateProperty.all(EdgeInsets.only(
+        //             right: 100,
+        //             left: 100,
+        //           )),
+        //           alignment: Alignment.center,
+        //           shape: MaterialStateProperty.all(BeveledRectangleBorder(
+        //               borderRadius: BorderRadius.circular(5)))),
+        //       child: Text(
+        //         "CheckOut",
+        //         style: TextStyle(color: Colors.white, fontSize: 18),
+        //       ),
+        //       onPressed: () {
+        //         Navigator.of(context)
+        //             .pushNamed('/checkout', arguments: index!);
+        //
+        //         // Navigator.of(context).push(MaterialPageRoute(
+        //         //   builder: (context) => CheckoutPage(),
+        //         // ));
+        //       },
+        //     ))
 
         ]),
       ),
